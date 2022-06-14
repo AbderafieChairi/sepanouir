@@ -1,0 +1,202 @@
+{% if arg1 %}
+{% extends 'admin/master.html' %}
+
+{% block body %}
+	<div class="ctn">
+		<h1>{{arg1}}</h1>
+	<div class="cont">
+		<div class="title-div">
+			<p class="title">Admin Login</p>
+			<div class="ligne"></div>
+		</div>
+			<form action="/login" method="post">
+				<label for="name">Email</label>
+				<input type="text" name="email" class="my-input">
+				<label for="name">Password</label>
+				<input type="password" name="password" class="my-input">
+				<div></div>
+				<div class="my-btn-container">
+				<input type="submit" value="Submit">
+				</div>
+			</form>
+	</div>
+</div>	
+{% endblock %}
+
+{% block head_css %}
+{{super()}}
+<style type="text/css">
+	:root{
+		--primary:#576DDC;
+		--secondary:#8C9CEC;
+	}
+	*{
+		margin:0px;
+		padding: 0px;
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+	.ctn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		flex-direction: column;
+	}
+	.cont{
+		background-color: #CDD6E9;
+		width: 400px;
+		border-radius:10px;
+		border:solid 2px var(--primary);
+		padding:20px 10px 0px;
+	}
+	.title-div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.title{
+		flex:1;
+		text-align: center;
+		font-size: 3vh;
+		font-family: sans-serif;
+		text-transform: uppercase;
+		color:var(--primary);
+		font-weight: bold;
+		padding: 10px;
+	}
+	.ligne{
+		flex:1;
+		height: 10px;
+		background-color: var(--primary);
+	}
+	form{
+		display: grid;
+  		grid-template-columns: auto auto;
+		padding:30px 10px 10px;#CDD6E9
+		}
+	form > * {
+		margin:5px;
+	}
+	.my-btn{
+		background-color: var(--secondary);
+		padding: 10px 13px;
+	}
+	.my-btn:hover{
+		cursor: pointer;
+		user-select: none;
+		background-color: var(--primary);
+		color: white;
+		float: left;
+	}
+	.my-btn-container{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.my-input{
+		padding: 5px 7px;
+	}
+	label{
+		font-weight: bold;
+	}
+</style>
+{% endblock %}
+
+{% else %}
+<body>
+		<div class="ctn">
+		<h1>{{arg1}}</h1>
+	<div class="cont">
+		<div class="title-div">
+			<p class="title">Admin Login</p>
+			<div class="ligne"></div>
+		</div>
+			<form action="/login" method="post">
+				<label for="name">Email</label>
+				<input type="text" name="email" class="my-input">
+				<label for="name">Password</label>
+				<input type="password" name="password" class="my-input">
+				<div></div>
+				<div class="my-btn-container">
+				<input type="submit" value="Submit">
+				</div>
+			</form>
+	</div>
+</div>	
+</body>
+<style type="text/css">
+	:root{
+		--primary:#576DDC;
+		--secondary:#8C9CEC;
+	}
+	*{
+		margin:0px;
+		padding: 0px;
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+	.ctn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		flex-direction: column;
+	}
+	.cont{
+		background-color: #CDD6E9;
+		width: 400px;
+		border-radius:10px;
+		border:solid 2px var(--primary);
+		padding:20px 10px 0px;
+	}
+	.title-div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.title{
+		flex:1;
+		text-align: center;
+		font-size: 3vh;
+		font-family: sans-serif;
+		text-transform: uppercase;
+		color:var(--primary);
+		font-weight: bold;
+		padding: 10px;
+	}
+	.ligne{
+		flex:1;
+		height: 10px;
+		background-color: var(--primary);
+	}
+	form{
+		display: grid;
+  		grid-template-columns: auto auto;
+		padding:30px 10px 10px;#CDD6E9
+		}
+	form > * {
+		margin:5px;
+	}
+	.my-btn{
+		background-color: var(--secondary);
+		padding: 10px 13px;
+	}
+	.my-btn:hover{
+		cursor: pointer;
+		user-select: none;
+		background-color: var(--primary);
+		color: white;
+		float: left;
+	}
+	.my-btn-container{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.my-input{
+		padding: 5px 7px;
+	}
+	label{
+		font-weight: bold;
+	}
+</style>
+{% endif %}
