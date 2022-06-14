@@ -49,6 +49,7 @@ class Config(object):
 
 
 class ProductionConfig(Config):
+	pass
 	# MAIL_PASSWORD = 'devpro2022'
 	# MAIL_USERNAME = 'sepanouir.amdin@gmail.com'
 	# SECRET_KEY = 'kjsgjgfdskhgfdskhgfksgkfqgkfq'	
