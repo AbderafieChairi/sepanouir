@@ -7,7 +7,7 @@ from flask_cors import CORS
 # from flask_mail import Mail, Message as Msg
 # from api import api
 # from admin import admin
-# from config import ProductionConfig
+from config import ProductionConfig
 app = Flask(__name__)
 # socketio = SocketIO(app, cors_allowed_origins='*')
 
@@ -27,7 +27,7 @@ CORS(app)
 # if env:
 # 	app.config.from_object(DeveloppementConfig)
 # else:
-# app.config.from_object(ProductionConfig)
+app.config.from_object(ProductionConfig)
 
 # app.register_blueprint(api)
 # admin.init_app(app)
