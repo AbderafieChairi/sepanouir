@@ -1,18 +1,18 @@
 from flask import Flask, jsonify,request,session,redirect,url_for
 from flask_cors import CORS
-from models import *
+# from models import *
 # from flask_admin import Admin
 # from flask_admin.contrib.sqla import ModelView
 # from flask_socketio import SocketIO, send,join_room,leave_room
 # from flask_mail import Mail, Message as Msg
-from api import api
-from admin import admin
+# from api import api
+# from admin import admin
 from config import ProductionConfig
 app = Flask(__name__)
 # socketio = SocketIO(app, cors_allowed_origins='*')
 
 CORS(app) 
-db.init_app(app)
+# db.init_app(app)
 # app.config['SECRET_KEY'] = "kjsgjgfdskhgfdskhgfksgkfqgkfq"
 # # app.config['SQLALCHEMY_DATABASE_URI'] ="postgresql://cwzwxlcnxuuxcn:b3587ceac71fde4de7702940eca4b62bbe95a0394f29d3898303d3a3f17cd71c@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/d814n28lilrokf"
 # app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///test.db"
@@ -29,8 +29,8 @@ db.init_app(app)
 # else:
 app.config.from_object(ProductionConfig)
 
-app.register_blueprint(api)
-admin.init_app(app)
+# app.register_blueprint(api)
+# admin.init_app(app)
 
 
 @app.route('/',methods=['GET'])
@@ -64,14 +64,14 @@ def get_all_users():
 # 	else:
 # 		send({"user1":str(Us[1]),"user2":str(Us[0])},broadcast=True)
 
-@app.route("/login",methods=['POST'])
-def login():
-	email=request.form['email']
-	password=request.form['password']
-	print(f'email :{email} \nPassword :{password}')
-	# print(request.form)
-	session['admin']=True
-	return redirect(admin.url)
+# @app.route("/login",methods=['POST'])
+# def login():
+# 	email=request.form['email']
+# 	password=request.form['password']
+# 	print(f'email :{email} \nPassword :{password}')
+# 	# print(request.form)
+# 	session['admin']=True
+# 	return redirect(admin.url)
 
 
 # @socketio.on('message',namespace='/comment')
