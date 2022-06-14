@@ -23,10 +23,10 @@ class Config(object):
 	DEBUG = True
 	TESTING = False
 	CSRF_ENABLED = True
-	SQLALCHEMY_TRACK_MODIFICATIONS = False
-	SESSION_COOKIE_SECURE = True
-	SESSION_COOKIE_HTTPONLY = True
-	SESSION_COOKIE_SAMESITE = 'None'
+	# SQLALCHEMY_TRACK_MODIFICATIONS = False
+	# SESSION_COOKIE_SECURE = True
+	# SESSION_COOKIE_HTTPONLY = True
+	# SESSION_COOKIE_SAMESITE = 'None'
 	# MAIL_SERVER = 'smtp.gmail.com'
 	# MAIL_PORT = 465
 	# MAIL_USE_TLS = False
@@ -51,6 +51,6 @@ class Config(object):
 class ProductionConfig(Config):
 	# MAIL_PASSWORD = 'devpro2022'
 	# MAIL_USERNAME = 'sepanouir.amdin@gmail.com'
-	SECRET_KEY = 'kjsgjgfdskhgfdskhgfksgkfqgkfq'	
+	# SECRET_KEY = 'kjsgjgfdskhgfdskhgfksgkfqgkfq'	
 	# SQLALCHEMY_DATABASE_URI = 'postgresql://tgmczdwjvwuacl:a1938326006507ed76dd9c882cd4cf73188652e0bb0466836f41269d9db77e3b@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/det00nsjnk0hv4'	
-	SQLALCHEMY_DATABASE_URI = "sqlite:///test.db"
+	# SQLALCHEMY_DATABASE_URI = "sqlite:///test.db"
